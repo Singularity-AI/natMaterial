@@ -48,6 +48,6 @@ RUN chown mirth /home/Pickup /home/Dropoff /home/Error
 EXPOSE 8080 8443
 
 COPY docker-entrypoint.sh /
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT [ "bash", "/docker-entrypoint.sh"]
 
 CMD ["java", "-jar", "mirth-server-launcher.jar"]
